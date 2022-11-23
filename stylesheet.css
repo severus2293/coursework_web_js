@@ -1,0 +1,36 @@
+html{
+    background-image: url('./sprites/background_2.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+#mainbox{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 10%;
+}
+span {
+    color: red;
+    font-size: 20px;
+}
+#button{
+    cursor: pointer;
+    border-radius: 100px;
+    margin-top: 3%;
+    width: 200px;
+    height: 50px;
+    color: #FFE400;
+    background-color: #272727;
+}
+#button:hover{
+    background-color: green;
+}
+#input{
+    margin-top: 20px;
+    background-color: beige;
+}

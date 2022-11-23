@@ -1,0 +1,80 @@
+html{
+    background-image: url('./sprites/background.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+#records_div{
+    float:right;
+    min-width: 250px;
+    width: 20%;
+}
+p{
+    color: yellow;
+}
+h2{
+    color: yellow;
+}
+table{
+    display: table;
+    width: 100%;
+}
+table thead, table tbody {
+    float: left;
+    width: 100%;
+}
+table tbody {
+    overflow: auto;
+    height: 100px;
+}
+table tr {
+    width: 100%;
+    display: table;
+    text-align: center;
+}
+table th, table td {
+    width: 33%;
+}
+
+tbody::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+tbody::-webkit-scrollbar-track {
+    background: orange;
+    border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: white;
+    border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+td{
+    color: yellow;
+    background-color: #747474;
+    font-size: 20px;
+    text-align: center;
+}
+button{
+    cursor: pointer;
+    border-radius: 100px;
+    margin-top: 7%;
+    width: 200px;
+    height: 50px;
+    color: #FFE400;
+    background-color: #272727;
+}
+button:hover{
+    background-color: green;
+}

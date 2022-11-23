@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="32" tileheight="32" infinite="0" nextlayerid="8" nextobjectid="16">
+ <editorsettings>
+  <export target="../maps/first.json" format="json"/>
+ </editorsettings>
+ <tileset firstgid="1" name="Dungeon" tilewidth="32" tileheight="32" tilecount="112" columns="4">
+  <image source="Dungeon.png" width="128" height="896"/>
+ </tileset>
+ <tileset firstgid="113" name="AnimationSheet_Character" tilewidth="32" tileheight="32" tilecount="72" columns="8">
+  <image source="AnimationSheet_Character.png" width="256" height="288"/>
+ </tileset>
+ <tileset firstgid="185" name="enemy_right" tilewidth="32" tileheight="32" tilecount="1" columns="1">
+  <image source="enemy_right.png" width="32" height="32"/>
+ </tileset>
+ <tileset firstgid="186" name="heal" tilewidth="32" tileheight="32" tilecount="1" columns="1">
+  <image source="heal.png" width="32" height="32"/>
+ </tileset>
+ <tileset firstgid="187" name="game_pack" tilewidth="32" tileheight="32" tilecount="9" columns="3">
+  <image source="game_pack.png" width="126" height="126"/>
+ </tileset>
+ <tileset firstgid="196" name="exit" tilewidth="32" tileheight="32" tilecount="1" columns="1">
+  <image source="exit.png" width="32" height="32"/>
+ </tileset>
+ <tileset firstgid="197" name="gold" tilewidth="32" tileheight="32" tilecount="1" columns="1">
+  <image source="gold.png" width="32" height="32"/>
+ </tileset>
+ <layer id="1" name="ground" width="30" height="20">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,5,5,5,5,5,5,5,5,5,0,0,0,0,0,0,0,0,5,5,5,5,5,5,5,5,5,5,5,0,
+0,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,0,5,5,5,5,5,5,5,5,5,5,5,0,
+0,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,0,5,5,5,5,5,5,5,5,5,5,5,0,
+0,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,0,5,5,5,5,5,5,5,5,5,5,5,0,
+0,5,5,5,5,0,0,0,0,0,0,0,0,0,5,5,5,0,5,5,5,5,5,5,5,5,5,5,5,0,
+0,5,5,5,5,0,0,0,0,0,0,0,0,0,5,5,5,0,5,5,0,0,0,0,0,0,5,5,5,0,
+0,5,5,0,0,0,5,5,5,5,5,5,0,0,5,5,5,0,5,5,0,5,5,5,5,0,5,5,5,0,
+0,5,5,5,5,0,5,5,5,5,5,5,0,0,0,0,5,0,5,5,0,5,5,5,5,0,5,5,5,0,
+0,5,5,5,5,0,5,5,5,5,5,5,0,0,5,5,5,5,5,5,0,5,5,5,5,0,5,5,5,0,
+0,5,5,5,5,0,5,5,5,5,5,5,0,0,5,5,5,5,5,5,5,5,5,5,5,0,5,5,5,0,
+0,5,5,5,0,0,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,0,5,5,5,0,
+0,5,5,5,0,0,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,0,5,5,5,0,
+0,5,5,5,0,0,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,0,0,5,5,5,0,
+0,5,5,5,0,0,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,0,0,0,0,5,5,5,5,0,
+0,5,5,5,0,0,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,0,5,5,5,5,5,5,5,0,
+0,5,5,5,0,0,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,0,5,5,5,5,5,5,5,0,
+0,5,5,5,0,0,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,0,5,5,5,5,5,5,5,0,
+0,0,0,0,0,0,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,0,5,5,5,5,5,5,5,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <objectgroup id="6" name="exit">
+  <object id="12" name="Exit" class="Exit" gid="196" x="737" y="576" width="32" height="32"/>
+ </objectgroup>
+ <objectgroup id="7" name="gold">
+  <object id="13" name="Gold" class="Gold" gid="197" x="738" y="321" width="32" height="32"/>
+  <object id="14" name="Gold" class="Gold" gid="197" x="256" y="288" width="32" height="32"/>
+  <object id="15" name="Gold" class="Gold" gid="197" x="128" y="323" width="32" height="32"/>
+ </objectgroup>
+ <layer id="5" name="wall" width="30" height="20" locked="1">
+  <data encoding="csv">
+37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,
+37,0,0,0,0,0,0,0,0,0,37,37,37,37,37,37,37,37,0,0,0,0,0,0,0,0,0,0,0,37,
+37,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,37,0,0,0,0,0,0,0,0,0,0,0,37,
+37,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,37,0,0,0,0,0,0,0,0,0,0,0,37,
+37,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,37,0,0,0,0,0,0,0,0,0,0,0,37,
+37,0,0,0,0,37,37,37,37,37,37,37,37,37,0,0,0,37,0,0,0,0,0,0,0,0,0,0,0,37,
+37,0,0,0,0,37,37,37,37,37,37,37,37,37,0,0,0,37,0,0,37,37,37,37,37,37,0,0,0,37,
+37,0,0,37,37,37,0,0,0,0,0,0,37,37,0,0,0,37,0,0,37,0,0,0,0,37,0,0,0,37,
+37,0,0,0,0,37,0,0,0,0,0,0,37,37,37,37,0,37,0,0,37,0,0,0,0,37,0,0,0,37,
+37,0,0,0,0,37,0,0,0,0,0,0,37,37,0,0,0,0,0,0,37,0,0,0,0,37,0,0,0,37,
+37,0,0,0,0,37,0,0,0,0,0,0,37,37,0,0,0,0,0,0,0,0,0,0,0,37,0,0,0,37,
+37,0,0,0,37,37,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,37,0,0,0,37,
+37,0,0,0,37,37,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,37,0,0,0,37,
+37,0,0,0,37,37,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,37,37,0,0,0,37,
+37,0,0,0,37,37,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,37,37,37,37,0,0,0,0,37,
+37,0,0,0,37,37,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,37,0,0,0,0,0,0,0,37,
+37,0,0,0,37,37,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,37,0,0,0,0,0,0,0,37,
+37,0,0,0,37,37,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,37,0,0,0,0,0,0,0,37,
+37,37,37,37,37,37,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,37,0,0,0,0,0,0,0,37,
+37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37
+</data>
+ </layer>
+ <objectgroup id="2" name="player" class="Player">
+  <object id="1" name="Player" class="Player" gid="113" x="33" y="158" width="32" height="32"/>
+ </objectgroup>
+ <objectgroup id="3" name="enemy" class="Enemy">
+  <object id="2" name="Enemy" class="Enemy" gid="185" x="476" y="190" width="32" height="32"/>
+  <object id="3" name="Enemy" class="Enemy" gid="185" x="65" y="450" width="32" height="32"/>
+  <object id="4" name="Enemy" class="Enemy" gid="185" x="448" y="589" width="32" height="32"/>
+ </objectgroup>
+ <objectgroup id="4" name="heal" class="Bonus">
+  <object id="5" name="Bonus" class="Bonus" gid="186" x="546" y="415" width="32" height="32"/>
+  <object id="11" name="Bonus" class="Bonus" gid="186" x="835" y="156" width="32" height="32"/>
+ </objectgroup>
+</map>
